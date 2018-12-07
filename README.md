@@ -1,18 +1,20 @@
-# Location Network Fingerprinting
+# Berkeley Demand Enterprises
 
-This is a project undertaken at the University of California, Berkeley Fall 2018 Challenge Lab: Amazoogle. 
-
-## Overview
-
-The aim is to extract fingerprints from location patterns. One of the algorithms to do this involves locating bridges in force-directed graphs. Bridges are nodes in a connected graph that connect multiple subgraphs, where if the bridge node was removed, then the subgraphs would be disconnected. Hence if we identify all the bridge nodes, we can infer patterns of nodes needed to connect sub-networks of nodes. 
+This is a project undertaken at the University of California, Berkeley Fall 2018 Challenge Lab: Amazoogle titled "Berkeley Demand Enterprises", with the aim to help businesses find the next link to their chain. 
+Contributors: Siddhartha Datta, Leon Ming, Daniel Zeng
 
 ## Documentation
-A. Install the required libraries
+A. There are three main components to the repository: (1) the web app, (2) the API POST request handler, (3) the fingerprinter. 
+* bde-react is the latest web app
+* bde-API is the mechanism used to transmit results from the fingerprinting algorithm to the web app
+* bde-fingerprinting handles the generation of the coordinates through ipynotebook
+
+B. Install the required libraries
 <b>Required libraries:</b>
 
 pandas | matplotlib | networkx | re | math | gmplot 
 
-B. The notebooks contain the entire pipeline for running the algorithm, visualizing the fingerprints on the map, and exporting the coordinates and html map. 
+C. The notebooks contain the entire pipeline for running the algorithm, visualizing the fingerprints on the map, and exporting the coordinates and html map. 
 1. To view the run the coordinates, ensure there is a dataframe and you know the column names for latitude and longitude. 
 Open implementation_notebook and modify Function(dataframe, int_or_float, samplesize, col1_name, col2_name, magicnumber, variable_index, html) accordingly. 
 2. Running the whole notebook will return the network graph and map plot. 
